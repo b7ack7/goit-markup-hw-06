@@ -230,6 +230,11 @@ header {
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:focus,
+.modal-close-button:hover {
+  fill: var(--color-focus);
 }
 .title-modal {
   font-weight: 700;
@@ -297,6 +302,8 @@ header {
 .field {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
 }
 .checkbox {
   position: absolute;
@@ -320,13 +327,29 @@ header {
 .checkbox:checked + .modal-icon {
   border-color: transparent;
   background-color: var(--color-focus);
-  background-image: url(../images/icon-check.svg);
   background-size: contain;
-  background-origin: border-box;
+  background-origin: padding-box;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-image: url(../images/icon-check.svg);
 }
-
+.button-modal {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 auto;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #fff;
+  padding: 10px 52px;
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
 .main-text-section {
   background-color: #fff;
   padding-bottom: initial;
